@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server rootURL="http://localhost:8111" uuid="32b6fe62-8bf3-4c03-aee0-14be0de33251">
+  <version number="875" />
+  <artifacts maxArtifactSize="314572800" artifact-paths="system/artifacts" />
+  <build-settings executionTimeout="0" />
+  <connected-servers />
+  <db-compact enabled="true">
+    <scheduler hour="3" minute="0" />
+  </db-compact>
+  <comment-transformation>
+    <transformation-pattern search="((https?://|ftp://|file://|mailto:)[\w`~@#$%^&amp;*\-=|/{}()\[\];:'?\.\+!,\\]+(?&lt;=[^\.,;&quot;'`\)\]}]))" replace="&lt;a target=&quot;_blank&quot; title=&quot;Click to open this link in a new window&quot; href=&quot;$1&quot;&gt;$1&lt;/a&gt;" description="Links transformation" />
+    <transformation-pattern search="(&#xD;?&#xA;|&#xD;)" replace="&lt;br/&gt;" description="Line feed transformation" />
+  </comment-transformation>
+  <vcs-settings modification-check-interval="60" quiet-period="60" />
+</server>
+
