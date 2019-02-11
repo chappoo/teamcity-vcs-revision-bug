@@ -13,6 +13,4 @@ teamcity/srv/data/system/dataDirectoryInitialized
 
 teamcity/srv/data/system/buildserver\.script
 
-teamcity/srv/data/system/buildserver\.properties
-
 teamcity/srv/data/system/artifacts/
