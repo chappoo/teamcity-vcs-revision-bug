@@ -1,0 +1,10 @@
+
+teamcity/srv/data/system/buildserver\.lck
+
+teamcity/srv/data/system/buildserver\.log
+
+teamcity/srv/logs/
+
+teamcity/srv/data/system/pluginData/
+
+teamcity/srv/data/system/caches/
