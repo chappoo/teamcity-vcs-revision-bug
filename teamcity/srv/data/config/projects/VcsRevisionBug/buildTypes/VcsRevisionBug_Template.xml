@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="5ba624dc-0f64-4185-8fdf-7216a9c469cc" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Template</name>
+  <settings>
+    <parameters>
+      <param name="Project" value="%system.teamcity.buildConfName%" />
+    </parameters>
+    <build-runners>
+      <runner id="RUNNER_1" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[echo "Running: %Project%"
+ls -la
+sleep 5s]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="VcsRevisionBug_Git">
+        <checkout-rule rule="+:%Project%" />
+        <checkout-rule rule="-:teamcity" />
+      </vcs-entry-ref>
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</template>
+
