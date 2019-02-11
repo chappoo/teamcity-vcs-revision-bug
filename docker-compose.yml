@@ -20,20 +20,20 @@ services:
     environment:
       - SERVER_URL=http://teamcity-server:8111
 
-  teamcity-agent-2:
-    container_name: teamcity-agent-2
-    image: jetbrains/teamcity-agent:2018.2.2
-    volumes:
-      - "./teamcity/agt-2/conf:/data/teamcity_agent/conf"
-      - ".:/data/src/repo"
-    environment:
-      - SERVER_URL=http://teamcity-server:8111
+  # teamcity-agent-2:
+  #   container_name: teamcity-agent-2
+  #   image: jetbrains/teamcity-agent:2018.2.2
+  #   volumes:
+  #     - "./teamcity/agt-2/conf:/data/teamcity_agent/conf"
+  #     - ".:/data/src/repo"
+  #   environment:
+  #     - SERVER_URL=http://teamcity-server:8111
 
-  teamcity-agent-3:
-    container_name: teamcity-agent-3
-    image: jetbrains/teamcity-agent:2018.2.2
-    volumes:
-      - "./teamcity/agt-3/conf:/data/teamcity_agent/conf"
-      - ".:/data/src/repo"
-    environment:
-      - SERVER_URL=http://teamcity-server:8111
+  # teamcity-agent-3:
+  #   container_name: teamcity-agent-3
+  #   image: jetbrains/teamcity-agent:2018.2.2
+  #   volumes:
+  #     - "./teamcity/agt-3/conf:/data/teamcity_agent/conf"
+  #     - ".:/data/src/repo"
+  #   environment:
+  #     - SERVER_URL=http://teamcity-server:8111
