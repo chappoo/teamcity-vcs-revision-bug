@@ -13,4 +13,17 @@
 
 > Open the [build chain](http://localhost:8111/viewChain.html?chainId=bt5&selectedBuildTypeId=bt5&contextProjectId=VcsRevisionBug) for a graphical view
 
-- Run the [Master build](http://localhost:8111/viewType.html?buildTypeId=VcsRevisionBug_Master)
+- Run the [Master build](http://localhost:8111/viewType.html?buildTypeId=VcsRevisionBug_Master); all builds should trigger
+- From a Terminal / Editor, create a branch and commit a change to `ProjectA/README.md`
+
+Bug:
+
+- TeamCity [Master build](http://localhost:8111/viewType.html?buildTypeId=VcsRevisionBug_Master) trigger will activate, and calculate that all builds in the chain should run
+
+Expectation:
+
+- [ProjectA build](http://localhost:8111/viewType.html?buildTypeId=VcsRevisionBug_ProjectA) and [Master build](http://localhost:8111/viewType.html?buildTypeId=VcsRevisionBug_Master) should run in order, with [ProjectB build](http://localhost:8111/viewType.html?buildTypeId=VcsRevisionBug_ProjectB) and [ProjectC build](http://localhost:8111/viewType.html?buildTypeId=VcsRevisionBug_ProjectC) satisfied by the existing builds from the `master` branch revision  
+
+Workaround:
+
+There is a workaround for this:
