@@ -5,6 +5,7 @@
 - From Terminal / Editor, browse to the checkout directory (assumed throughout this process)
 - Bring up the TeamCity environment:
     -     docker-compose up -d
+- Wait a few moments for the containers to start
 - Browse to the TeamCity website: http://localhost:8111
 - Login using: `admin` / `admin`
 
