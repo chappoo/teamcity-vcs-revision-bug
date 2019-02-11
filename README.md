@@ -1,7 +1,7 @@
 # Steps to reproduce
 
 - Clone this repository:
-    -     git clone git://uri/
+    -     git clone https://github.com/chappoo/teamcity-vcs-revision-bug.git
 - From Terminal / Editor, browse to the checkout directory (assumed throughout this process)
 - Bring up the TeamCity environment:
     -     docker-compose up -d
