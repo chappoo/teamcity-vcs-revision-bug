@@ -14,7 +14,11 @@
 > Open the [build chain](http://localhost:8111/viewChain.html?chainId=bt5&selectedBuildTypeId=bt5&contextProjectId=VcsRevisionBug) for a graphical view
 
 - Run the [Master build](http://localhost:8111/viewType.html?buildTypeId=VcsRevisionBug_Master); all builds should trigger
-- From a Terminal / Editor, create a branch and commit a change to `ProjectA/README.md`
+
+Test:
+
+- From a Terminal / Editor, create a branch and commit a change to:
+    - `ProjectA/README.md`
 
 Bug:
 
@@ -27,3 +31,17 @@ Expectation:
 Workaround:
 
 There is a workaround for this:
+
+- Checkout `master` branch
+- From a Terminal / Editor, commit changes (direct to `master`) to:
+    - `ProjectA/README.md`
+    - `ProjectB/README.md`
+    - `ProjectC/README.md`
+- [Master build](http://localhost:8111/viewType.html?buildTypeId=VcsRevisionBug_Master) chain will trigger as expected for all builds
+
+Repeat the test
+
+- From a Terminal / Editor, create a branch and commit a change to:
+    - `ProjectA/README.md`
+
+The build chain will now correctly execute just [ProjectA build](http://localhost:8111/viewType.html?buildTypeId=VcsRevisionBug_ProjectA) and [Master build](http://localhost:8111/viewType.html?buildTypeId=VcsRevisionBug_Master)
